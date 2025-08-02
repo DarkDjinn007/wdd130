@@ -19,13 +19,18 @@
 <body>
 
   <header>
-    <img src="images/logo.jpg" alt="Rafting Company Logo" />
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="trips.html">Trips</a>
-      <a href="contact.html">Contact Us</a>
-    </nav>
+    <div class="header-container">
+      <img src="images/logo.jpg" alt="Rafting Company Logo" class="logo" />
+      <h1>Whitewater Rafting</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="trips.html">Trips</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -38,29 +43,56 @@
       </article>
     </div>
 
-    <section>
-      <h2>History</h2>
-      <p>Founded in 2010, Whitewater Rafting started with a simple goal — to share the thrill of river adventures with people from all walks of life. What began as a small local business has grown into a trusted outdoor experience provider, offering safe and exciting rafting trips across the region. Our experienced guides, strong community roots, and love for nature have helped us become a favorite among outdoor enthusiasts.
-  </p></p>
+    <section class="history">
+      <div class="history-left">
+        <p>
+          Founded in 2010, Whitewater Rafting started with a simple goal — to share the thrill of river adventures with people from all walks of life. What began as a small local business has grown into a trusted outdoor experience provider, offering safe and exciting rafting trips across the region.
+        </p>
+      </div>
+      <div class="history-image">
+        <img src="images/history.jpg" alt="Rafting History" />
+      </div>
+      <div class="history-right">
+        <p>
+          Our experienced guides, strong community roots, and love for nature have helped us become a favorite among outdoor enthusiasts. We believe in building trust, creating lasting memories, and making the outdoors accessible to everyone.
+        </p>
+      </div>
     </section>
 
-    <section>
+    <section class="adventures">
       <h2>Adventure Awaits You!</h2>
-      <img src="images/adventure1.jpg" alt="Rafting 1" />
-      <img src="images/adventure2.jpg" alt="Rafting 2" />
-      <img src="images/adventure3.jpg" alt="Rafting 3" />
-      <img src="images/adventure4.jpg" alt="Rafting 4" />
-      <img src="images/adventure5.jpg" alt="Rafting 5" />
+      <div class="adventure-gallery">
+        <figure>
+          <img src="images/adventure1.jpg" alt="Los Dientes del Diablo">
+          <figcaption>Los Dientes del Diablo</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adventure2.jpg" alt="Big Mallard">
+          <figcaption>Big Mallard</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adventure3.jpg" alt="Half Day Adventure">
+          <figcaption>Half Day Adventure</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adventure4.jpg" alt="Devil’s Canyon">
+          <figcaption>Devil’s Canyon</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adventure5.jpg" alt="Sunset Rapids">
+          <figcaption>Sunset Rapids</figcaption>
+        </figure>
+      </div>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Whitewater Rafting | Samuel</p>
-    <nav class="socialmedia">
+    <div class="socialmedia">
       <a href="https://facebook.com"><img src="images/facebook.svg" alt="Facebook"></a>
       <a href="https://twitter.com"><img src="images/twitter.svg" alt="Twitter"></a>
       <a href="https://instagram.com"><img src="images/instagram.svg" alt="Instagram"></a>
-    </nav>
+    </div>
   </footer>
 
 </body>
