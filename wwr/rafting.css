@@ -1,0 +1,291 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS Variables */
+:root {
+  --primary-color: #0d6efd; /* sharper blue */
+  --secondary-color: #4d4d4d;
+  --accent1-color: #fff176; /* brighter yellow */
+  --accent2-color: #222222;
+  --heading-font: 'Georgia', serif;
+  --body-font: 'Roboto', sans-serif;
+}
+
+/* Base Styles */
+body {
+  font-family: var(--body-font);
+  color: var(--accent2-color);
+  background-color: #fff;
+}
+
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+/* Header - Using CSS Grid for layout */
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 10px 16px;
+  color: white;
+}
+
+header img.logo {
+  width: 100px;
+  height: auto;
+}
+
+header h1 {
+  font-family: var(--heading-font);
+  font-size: 1.8rem;
+  justify-self: center;
+  color: white;
+}
+
+/* Navigation - Flex for horizontal layout */
+nav ul.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  justify-self: end;
+}
+
+nav ul.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul.nav-links li a:hover,
+nav ul.nav-links li a:focus {
+  background-color: var(--accent1-color);
+  color: var(--primary-color);
+}
+
+/* Headings */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+/* General margin and padding for text containers */
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+
+/* Social media icons */
+.socialmedia {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.socialmedia a img {
+  width: 30px;
+  height: 30px;
+  filter: invert(1); /* white icons on dark bg */
+  transition: filter 0.3s ease;
+}
+
+.socialmedia a img:hover {
+  filter: invert(0.6) sepia(1) saturate(5) hue-rotate(190deg);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  margin: 20px 0;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  background-color: var(--accent1-color);
+  color: #fff;
+  opacity: 0.85;
+  font-size: 2.2rem;
+}
+
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 1rem;
+  width: 60%;
+}
+
+.hero article img {
+  float: right;
+  width: 125px;
+  margin-left: 12px;
+}
+
+/* History Section Layout */
+section h2 {
+  margin-top: 24px;
+  margin-left: 16px;
+}
+
+/* Adventure Section */
+section:nth-of-type(3) {
+  margin: 16px;
+  padding: 8px;
+  background-color: #f7f7f7;
+  border-radius: 6px;
+  text-align: center;
+}
+
+section:nth-of-type(3) h2 {
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+section:nth-of-type(3) figure {
+  display: inline-block;
+  margin: 8px 12px;
+  width: 150px;
+  vertical-align: top;
+}
+
+section:nth-of-type(3) figure img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+section:nth-of-type(3) figcaption {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+/* Footer Styling */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+}
+
+footer p {
+  margin: 6px 0;
+}
+
+/* Contact Page Specific Styles */
+
+/* Company Info Section */
+.company-info, .contact-form, .employees {
+  margin: 32px 0;
+  padding: 16px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  color: var(--accent2-color);
+}
+
+.company-info h2, .employees h2, .contact-form h2 {
+  color: var(--primary-color);
+  margin-bottom: 16px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* Employee gallery */
+.employee-gallery {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.employee-gallery figure {
+  flex: 1 1 30%;
+  text-align: center;
+  background: white;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.employee-gallery figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Contact Form */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.contact-form textarea {
+  min-height: 100px;
+}
+
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+  background-color: #084298;
+}
